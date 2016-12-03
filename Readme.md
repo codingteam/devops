@@ -18,7 +18,7 @@ Host specification
 
 - [codingteam.org.ru][host-ctor]
 
-[host-ctor]: ctos/Host.md
+[host-ctor]: ctor/Host.md
 
 [codingteam.org.ru]: https://codingteam.org.ru
 [issues]: https://github.com/codingteam/devops/issues
