@@ -1,0 +1,11 @@
+[Unit]
+Description=codingteam.org.ru site
+After=network.target
+
+[Service]
+User=cor-site
+WorkingDirectory=/opt/codingteam/codingteam.org.ru/
+ExecStart=/usr/bin/dotnet /opt/codingteam/codingteam.org.ru/codingteam.org.ru.dll
+
+[Install]
+WantedBy=multi-user.target

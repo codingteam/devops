@@ -13,6 +13,13 @@ We're hosting a set of services:
 If you have an issue with any of these services, feel free to [open an
 issue][issues].
 
+Host specification
+------------------
+
+- [codingteam.org.ru][host-ctor]
+
+[host-ctor]: ctos/Host.md
+
 [codingteam.org.ru]: https://codingteam.org.ru
 [issues]: https://github.com/codingteam/devops/issues
 [loglist.net]: https://loglist.net

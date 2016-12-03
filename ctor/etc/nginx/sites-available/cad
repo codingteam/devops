@@ -1,0 +1,8 @@
+server {
+	listen 80;
+	listen [::]:80;
+	server_name cad.codingteam.org.ru;
+
+    root /opt/svg-cgs;
+    index index.html index.htm;
+}
