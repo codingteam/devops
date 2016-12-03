@@ -17,7 +17,7 @@ Enabled infrastructural services:
 - nginx
 - PostgreSQL
 
-[loglist-sample-conf]: etc/loglist/loglist.conf
+[loglist-sample-conf]: etc/loglist/loglist.sample.conf
 
 [codingteam.org.ru]: https://github.com/codingteam/codingteam.org.ru
 [loglist]: https://github.com/codingteam/loglist
