@@ -1,6 +1,8 @@
 Codingteam operations
 =====================
 
+[![Schematic][schematic]][devops]
+
 This is a repository dedicated to Codingteam infrastructure maintenance.
 
 We're hosting a set of services:
@@ -19,8 +21,10 @@ Host specification
 - [codingteam.org.ru][host-ctor]
 
 [host-ctor]: ctor/Host.md
+[schematic]: docs/devops.png
 
 [codingteam.org.ru]: https://codingteam.org.ru
+[devops]: https://ru.wikipedia.org/wiki/DevOps
 [issues]: https://github.com/codingteam/devops/issues
 [loglist.net]: https://loglist.net
 [xmpp.net]:  https://xmpp.net/result.php?domain=codingteam.org.ru&type=client
