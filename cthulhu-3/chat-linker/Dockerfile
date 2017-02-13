@@ -4,4 +4,4 @@ RUN cd /usr/app/src && npm install # TODO: Not stable enough; migrate to yarn
 COPY app-config.json /usr/app/src/app-config.json
 WORKDIR /usr/app/src
 ENV NODE_ENV prod
-CMD ["node", "app.js"]
+CMD ["npm", "run prod"]
