@@ -1,7 +1,7 @@
-cthulhu-3
+omnissiah
 =========
 
-This is a service hosted at [DATA EXPUNGED].
+This is a machine hosted at [DATA EXPUNGED].
 
 Enabled end-user services:
 
