@@ -1,0 +1,7 @@
+version: '2'
+services:
+    application:
+        image: revenrof/horta-hell:0.17.3
+        restart: always
+        volumes:
+            - ${horta_hell_data}:/data

@@ -1,0 +1,25 @@
+login=horta-hell
+password=password
+server=codingteam.org.ru
+nickname=horta hell
+
+xmpp.timeout_ms=10000
+
+rooms=sample
+sample.room=codingteam@conference.jabber.ru
+sample.locale=ru
+sample.events=twitter
+
+localization.default=en
+
+storage.url=jdbc:h2:/data/hell
+storage.user=sa
+storage.password=
+
+twitter.enabled=false
+twitter.auth.consumerKey=testkey
+twitter.auth.consumerSecret=testsecret
+twitter.auth.token=testtoken
+twitter.auth.tokenSecret=testtokensecret
+
+pet.rooms=sample

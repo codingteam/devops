@@ -18,9 +18,13 @@ issue][issues].
 Host specification
 ------------------
 
-- [codingteam.org.ru][host-ctor]
+- [codingteam.org.ru][hosts/ctor]
+- [cthulhu-3][hosts/cthulhu-3]
+- [omnissiah][hosts/omnissiah]
 
-[host-ctor]: ctor/Host.md
+[hosts/ctor]: ctor/Host.md
+[hosts/cthulhu-3]: cthulhu-3/Host.md
+[hosts/omnissiah]: omnissiah/Host.md
 [schematic]: docs/devops.png
 
 [codingteam.org.ru]: https://codingteam.org.ru
