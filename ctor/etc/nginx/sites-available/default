@@ -2,11 +2,7 @@ server {
     listen 443 ssl;
     server_name codingteam.org.ru;
     keepalive_timeout 60;
-    ssl_certificate /etc/letsencrypt/live/loglist.net/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/loglist.net/privkey.pem;
-    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
-    ssl_ciphers  "HIGH:!aNULL:!MD5:!kEDH";
-    add_header Strict-Transport-Security 'max-age=15552000';
+    include /etc/nginx/ssl.conf;
 
     location /_logs/ {
         proxy_set_header X-Forwarded-Host $host;
