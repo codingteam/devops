@@ -1,32 +1,13 @@
-# You may add here your
-# server {
-#	...
-# }
-# statements for each of your virtual hosts to this file
-
-##
-# You should look at the following URL's in order to grasp a solid understanding
-# of Nginx configuration files in order to fully unleash the power of Nginx.
-# http://wiki.nginx.org/Pitfalls
-# http://wiki.nginx.org/QuickStart
-# http://wiki.nginx.org/Configuration
-#
-# Generally, you will want to move this file somewhere, and start with a clean
-# file but keep this around for reference. Or just disable in sites-enabled.
-#
-# Please see /usr/share/doc/nginx-doc/examples/ for more detailed examples.
-##
-
 server {
     listen 443 ssl http2;
-    server_name loglist.net;
+    server_name loglist.xyz;
     include /etc/nginx/ssl.conf;
 
     location / {
         proxy_set_header X-Forwarded-Host $host;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         proxy_set_header X-Forwarded-Proto $scheme;
-        proxy_set_header Host loglist.net;
+        proxy_set_header Host loglist.xyz;
         proxy_http_version 1.1;
         proxy_pass http://localhost:9000/;
     }
@@ -34,27 +15,27 @@ server {
 
 server {
     listen 443 ssl http2;
-    server_name *.loglist.net;
+    server_name *.loglist.xyz;
     include /etc/nginx/ssl.conf;
 
     location / {
-        return 301 https://loglist.net$request_uri;
+        return 301 https://loglist.xyz$request_uri;
     }
 }
 
 server {
-	listen 80;
-	server_name loglist.net;
+    listen 80;
+    server_name loglist.xyz;
 
-	location / {
-		 rewrite ^(.*)$ https://loglist.net$1 permanent;
-	}
+    location / {
+         rewrite ^(.*)$ https://loglist.xyz$1 permanent;
+    }
 }
 
 server {
-	listen 80;
-	server_name *.loglist.net;
-	location / {
-		 return 301 https://loglist.net$request_uri;
-	}
+    listen 80;
+    server_name *.loglist.xyz;
+    location / {
+         return 301 https://loglist.xyz$request_uri;
+    }
 }

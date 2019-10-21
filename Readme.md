@@ -9,7 +9,7 @@ We're hosting a set of services:
 
 - XMPP server [![xmpp.net score][badge-xmpp.net]][xmpp.net]
 - [codingteam.org.ru][] site
-- [loglist.net][] site
+- [loglist.xyz][] site
 - [DATA EXPUNGED]
 
 If you have an issue with any of these services, feel free to [open an
@@ -30,7 +30,7 @@ Host specification
 [codingteam.org.ru]: https://codingteam.org.ru
 [devops]: https://ru.wikipedia.org/wiki/DevOps
 [issues]: https://github.com/codingteam/devops/issues
-[loglist.net]: https://loglist.net
+[loglist.xyz]: https://loglist.xyz
 [xmpp.net]:  https://xmpp.net/result.php?domain=codingteam.org.ru&type=client
 
 [badge-xmpp.net]: https://xmpp.net/badge.php?domain=codingteam.org.ru
