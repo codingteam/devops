@@ -8,6 +8,14 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A37A2B6B-F09B-4105-8AA5-47BA5D74B68A}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{C4672A21-FB21-4BBF-A0A1-512AC1B66C9A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{67164D20-A669-4BC3-A40E-751D3045BA89}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\main.yml = .github\workflows\main.yml
 	EndProjectSection
 EndProject
 Global
@@ -23,5 +31,8 @@ Global
 		{E08EC4D8-5FD7-45CB-B48A-689005546B10}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E08EC4D8-5FD7-45CB-B48A-689005546B10}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E08EC4D8-5FD7-45CB-B48A-689005546B10}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{67164D20-A669-4BC3-A40E-751D3045BA89} = {C4672A21-FB21-4BBF-A0A1-512AC1B66C9A}
 	EndGlobalSection
 EndGlobal
