@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Codingteam.Ctor", "ctor\Codingteam.Ctor.fsproj", "{E08EC4D8-5FD7-45CB-B48A-689005546B10}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A37A2B6B-F09B-4105-8AA5-47BA5D74B68A}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E08EC4D8-5FD7-45CB-B48A-689005546B10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E08EC4D8-5FD7-45CB-B48A-689005546B10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E08EC4D8-5FD7-45CB-B48A-689005546B10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E08EC4D8-5FD7-45CB-B48A-689005546B10}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
