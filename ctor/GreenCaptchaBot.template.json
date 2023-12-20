@@ -1,0 +1,6 @@
+﻿{
+    "Configuration": {
+        "BotToken": "$BOT_TOKEN",
+        "DeleteJoinMessages": "Unsuccessful"
+    }
+}
