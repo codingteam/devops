@@ -14,5 +14,4 @@ let private cluster mode =
     |]
 
 let main (args: string[]): int =
-    let cluster =
     EntryPoint.main args cluster

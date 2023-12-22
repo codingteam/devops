@@ -2,19 +2,23 @@
 
 open Fabricator.Core
 open Fabricator.Resources.Files
+open Fabricator.Resources.Docker
 
 let private hostConfigDirectory = "/opt/green-captcha-bot/"
-let private docker = docker {
+let private docker =
     let version = "v1.15.1"
-    fromSources <| sources {
-        gitRepository "https://github.com/ImoutoChan/GreenCaptchaBot.git"
-        reference $"tags/{version}"
+    dockerContainer {
+        Sources = {
+            GitRepository = "https://github.com/ImoutoChan/GreenCaptchaBot.git"
+            GitReference = $"tags/{version}"
+        }
+        DockerfilePath = "CaptchaBot/Dockerfile"
+        Tag = version
+        Name = "green-captcha-bot"
+        Options = [|
+            Volume(hostPath = hostConfigDirectory, containerPath = "/app/Configuration")
+        |]
     }
-    withDockerfile "CaptchaBot/Dockerfile"
-    withTag version
-    withName "green-captcha-bot"
-    withVolume(hostPath = hostConfigDirectory, containerPath = "/app/Configuration")
-}
 
 let private configFile = FileResource(templatedFile "GreenCaptchaBot.template.json", $"{hostConfigDirectory}/appsettings.json")
 
