@@ -3,6 +3,7 @@
 open Fabricator.Core
 open Fabricator.Resources.Files
 open Fabricator.Resources.Docker
+open Fabricator.Templates.FileTemplates
 
 let private hostConfigDirectory = "/opt/green-captcha-bot/"
 let private docker =
@@ -20,6 +21,9 @@ let private docker =
         |]
     }
 
-let private configFile = FileResource(templatedFile "GreenCaptchaBot.template.json", $"{hostConfigDirectory}/appsettings.json")
+let private configFile parameters = FileResource(
+    templatedFile "GreenCaptchaBot.template.json" parameters,
+    $"{hostConfigDirectory}/appsettings.json"
+)
 
-let resources: IResource[] = [| configFile; docker |]
+let resources(parameters: Map<string, string>): IResource[] = [| configFile parameters; docker |]

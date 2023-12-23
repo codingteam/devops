@@ -14,6 +14,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Fabricator\Fabricator.Console\Fabricator.Console.fsproj" />
     <ProjectReference Include="..\Fabricator\Fabricator.Resources\Fabricator.Resources.fsproj" />
+    <ProjectReference Include="..\Fabricator\Fabricator.Templates\Fabricator.Templates.fsproj" />
   </ItemGroup>
 
 </Project>
