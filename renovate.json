@@ -6,8 +6,8 @@
     "customManagers": [
         {
             "customType": "regex",
-            "fileMatch": [
-                "^\\.github/workflows/.+\\.yml$"
+            "managerFilePatterns": [
+                "/^\\.github/workflows/.+\\.yml$/"
             ],
             "matchStrings": [
                 "Install-Module (?<depName>\\S+?) -RequiredVersion (?<currentValue>\\S+)"
