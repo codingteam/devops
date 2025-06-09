@@ -25,6 +25,7 @@ Host specification
 - [codingteam.org.ru][hosts/ctor]
 - [cthulhu-3][hosts/cthulhu-3]
 - [omnissiah][hosts/omnissiah]
+- [xmpp2][hosts.xmpp2]
 
 Documentation
 -------------
@@ -40,6 +41,7 @@ The license indication in the project's sources is compliant with the [REUSE spe
 [codingteam.org.ru]: https://codingteam.org.ru
 [devops]: https://ru.wikipedia.org/wiki/DevOps
 [docs.license]: LICENSES/MIT.txt
+[host.xmpp2]: xmpp2/HOST.md
 [hosts/cthulhu-3]: cthulhu-3/Host.md
 [hosts/ctor]: ctor/Host.md
 [hosts/omnissiah]: omnissiah/Host.md
