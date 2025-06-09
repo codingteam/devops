@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2017-2025 Friedrich von Never <friedrich@fornever.me>
+#
+# SPDX-License-Identifier: MIT
+
 FROM node:8.7.0-alpine
 RUN apk update && apk add git
 RUN git clone https://github.com/jt3k/chat-linker.git /usr/app && cd /usr/app && git checkout 4aab67aa6a59368896d427f14060c59484ff0a37
