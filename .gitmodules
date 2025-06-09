@@ -1,0 +1,3 @@
+[submodule "Fabricator"]
+	path = Fabricator
+	url = git@github.com:ForNeVeR/Fabricator.git

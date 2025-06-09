@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="GreenCaptchaBot.fs" />
+    <Compile Include="Program.fs" />
+    <Content Include="GreenCaptchaBot.template.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Fabricator\Fabricator.Console\Fabricator.Console.fsproj" />
+    <ProjectReference Include="..\Fabricator\Fabricator.Resources\Fabricator.Resources.fsproj" />
+    <ProjectReference Include="..\Fabricator\Fabricator.Templates\Fabricator.Templates.fsproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,68 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Codingteam.Ctor", "ctor\Codingteam.Ctor.fsproj", "{E08EC4D8-5FD7-45CB-B48A-689005546B10}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A37A2B6B-F09B-4105-8AA5-47BA5D74B68A}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{C4672A21-FB21-4BBF-A0A1-512AC1B66C9A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{67164D20-A669-4BC3-A40E-751D3045BA89}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\main.yml = .github\workflows\main.yml
+	EndProjectSection
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Fabricator.Console", "Fabricator\Fabricator.Console\Fabricator.Console.fsproj", "{0157906C-006C-45F8-A79A-0D55F16B16B2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Fabricator", "Fabricator", "{853E359A-18C5-4472-A712-D5C80EE99D6B}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Fabricator.Core", "Fabricator\Fabricator.Core\Fabricator.Core.fsproj", "{C57439E9-20AF-4EEB-8C91-5D74D346374B}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Fabricator.Resources", "Fabricator\Fabricator.Resources\Fabricator.Resources.fsproj", "{414C5063-3201-43AC-9DA1-B18A18802C0D}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Fabricator.Templates", "Fabricator\Fabricator.Templates\Fabricator.Templates.fsproj", "{E4F7858D-B0F7-4B42-928F-02688E843566}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E08EC4D8-5FD7-45CB-B48A-689005546B10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E08EC4D8-5FD7-45CB-B48A-689005546B10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E08EC4D8-5FD7-45CB-B48A-689005546B10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E08EC4D8-5FD7-45CB-B48A-689005546B10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0157906C-006C-45F8-A79A-0D55F16B16B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0157906C-006C-45F8-A79A-0D55F16B16B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0157906C-006C-45F8-A79A-0D55F16B16B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0157906C-006C-45F8-A79A-0D55F16B16B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C57439E9-20AF-4EEB-8C91-5D74D346374B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C57439E9-20AF-4EEB-8C91-5D74D346374B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C57439E9-20AF-4EEB-8C91-5D74D346374B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C57439E9-20AF-4EEB-8C91-5D74D346374B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{414C5063-3201-43AC-9DA1-B18A18802C0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{414C5063-3201-43AC-9DA1-B18A18802C0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{414C5063-3201-43AC-9DA1-B18A18802C0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{414C5063-3201-43AC-9DA1-B18A18802C0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4F7858D-B0F7-4B42-928F-02688E843566}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4F7858D-B0F7-4B42-928F-02688E843566}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4F7858D-B0F7-4B42-928F-02688E843566}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4F7858D-B0F7-4B42-928F-02688E843566}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{67164D20-A669-4BC3-A40E-751D3045BA89} = {C4672A21-FB21-4BBF-A0A1-512AC1B66C9A}
+		{0157906C-006C-45F8-A79A-0D55F16B16B2} = {853E359A-18C5-4472-A712-D5C80EE99D6B}
+		{C57439E9-20AF-4EEB-8C91-5D74D346374B} = {853E359A-18C5-4472-A712-D5C80EE99D6B}
+		{414C5063-3201-43AC-9DA1-B18A18802C0D} = {853E359A-18C5-4472-A712-D5C80EE99D6B}
+		{E4F7858D-B0F7-4B42-928F-02688E843566} = {853E359A-18C5-4472-A712-D5C80EE99D6B}
+	EndGlobalSection
+EndGlobal
