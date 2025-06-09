@@ -22,15 +22,25 @@ Host specification
 - [cthulhu-3][hosts/cthulhu-3]
 - [omnissiah][hosts/omnissiah]
 
-[hosts/ctor]: ctor/Host.md
-[hosts/cthulhu-3]: cthulhu-3/Host.md
-[hosts/omnissiah]: omnissiah/Host.md
-[schematic]: docs/devops.png
+Documentation
+-------------
+- [Contributor Guide][docs.contributing]
 
-[codingteam.org.ru]: https://codingteam.org.ru
-[devops]: https://ru.wikipedia.org/wiki/DevOps
-[issues]: https://github.com/codingteam/devops/issues
-[loglist.xyz]: https://loglist.xyz
-[xmpp.net]:  https://xmpp.net/result.php?domain=codingteam.org.ru&type=client
+License
+-------
+The project is distributed under the terms of [the MIT license][docs.license].
+
+The license indication in the project's sources is compliant with the [REUSE specification v3.3][reuse.spec].
 
 [badge-xmpp.net]: https://xmpp.net/badge.php?domain=codingteam.org.ru
+[codingteam.org.ru]: https://codingteam.org.ru
+[devops]: https://ru.wikipedia.org/wiki/DevOps
+[docs.license]: LICENSES/MIT.txt
+[hosts/cthulhu-3]: cthulhu-3/Host.md
+[hosts/ctor]: ctor/Host.md
+[hosts/omnissiah]: omnissiah/Host.md
+[issues]: https://github.com/codingteam/devops/issues
+[loglist.xyz]: https://loglist.xyz
+[reuse.spec]: https://reuse.software/spec-3.3/
+[schematic]: docs/devops.png
+[xmpp.net]:  https://xmpp.net/result.php?domain=codingteam.org.ru&type=client
