@@ -1,7 +1,5 @@
-Codingteam operations
-=====================
-
-[![Schematic][schematic]][devops]
+🔧 Codingteam operations 🔧
+=========================
 
 This is a repository dedicated to Codingteam infrastructure maintenance.
 
@@ -42,5 +40,4 @@ The license indication in the project's sources is compliant with the [REUSE spe
 [issues]: https://github.com/codingteam/devops/issues
 [loglist.xyz]: https://loglist.xyz
 [reuse.spec]: https://reuse.software/spec-3.3/
-[schematic]: docs/devops.png
 [xmpp.net]:  https://xmpp.net/result.php?domain=codingteam.org.ru&type=client
