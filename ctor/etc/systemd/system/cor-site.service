@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2016-2025 Friedrich von Never <friedrich@fornever.me>
+#
+# SPDX-License-Identifier: MIT
+
 [Unit]
 Description=codingteam.org.ru site
 After=network.target
