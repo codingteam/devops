@@ -2,5 +2,4 @@
 #
 # SPDX-License-Identifier: MIT
 
-- import_playbook: auth.yml
-- import_playbook: nginx.yml
+wsl --distribution Ubuntu ansible-vault @args

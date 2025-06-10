@@ -1,0 +1,20 @@
+---
+- name: Install and configure Nginx
+  hosts: xmpp2
+  become: true
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+        cache_valid_time: 3600
+
+    - name: Install nginx package
+      apt:
+        name: nginx
+        state: present
+
+    - name: Start and enable nginx service
+      service:
+        name: nginx
+        state: started
+        enabled: yes

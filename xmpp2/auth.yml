@@ -3,11 +3,12 @@
 # SPDX-License-Identifier: MIT
 
 ---
-- name: Set up user
+- name: Set up the users and authentication
   hosts: xmpp2
   become: true
 
   vars_files:
+    - secrets.yml
     - vars.yml
 
   handlers:
@@ -28,12 +29,13 @@
         groups: ['sudo', 'sshuser']
         append: true
         home: '/home/{{ user.name }}'
-        password_lock: true
+        password_lock: false
+        password: '{{ user_secrets.password_hash }}'
 
     - name: Ensure the user can use SSH
       ansible.posix.authorized_key:
         user: '{{ user.name }}'
-        key: '{{ user.ssh_key }}'
+        key: '{{ user.ssh_public_key }}'
 
     - name: Ensure only members of sshuser group can connect via SSH
       ansible.builtin.lineinfile:
