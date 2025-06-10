@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2023-2025 Friedrich von Never <friedrich@fornever.me>
+//
+// SPDX-License-Identifier: MIT
+
 open Fabricator.Console
 open Fabricator.Core
 open Fabricator.Templates.FileTemplates
