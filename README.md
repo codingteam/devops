@@ -39,6 +39,7 @@ The license indication in the project's sources is compliant with the [REUSE spe
 [badge-xmpp.net]: https://xmpp.net/badge.php?domain=codingteam.org.ru
 [codingteam.org.ru]: https://codingteam.org.ru
 [devops]: https://ru.wikipedia.org/wiki/DevOps
+[docs.contributing]: CONTRIBUTING.md
 [docs.license]: LICENSES/MIT.txt
 [hosts/cthulhu-3]: cthulhu-3/Host.md
 [hosts/ctor]: ctor/Host.md
