@@ -8,17 +8,17 @@
   become: true
   tasks:
     - name: Update apt cache
-      apt:
-        update_cache: yes
+      ansible.builtin.apt:
+        update_cache: true
         cache_valid_time: 3600
 
     - name: Install nginx package
-      apt:
+      ansible.builtin.apt:
         name: nginx
         state: present
 
     - name: Start and enable nginx service
-      service:
+      ansible.builtin.service:
         name: nginx
         state: started
-        enabled: yes
+        enabled: true
