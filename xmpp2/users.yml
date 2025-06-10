@@ -25,7 +25,7 @@
       ansible.builtin.user:
         name: '{{ user.name }}'
         shell: /bin/sh
-        groups: [ 'sudo', 'sshuser' ]
+        groups: ['sudo', 'sshuser']
         append: true
         home: '/home/{{ user.name }}'
         password_lock: true

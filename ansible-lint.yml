@@ -4,4 +4,5 @@
 
 exclude_paths:
   - .github/ # no Ansible plays in there
+  - ctor/kubernetes/ # TODO: Drop this before merge
   - xmpp2/default.yml # just a list of other files
