@@ -1,4 +1,4 @@
-﻿module internal Codingteam.Ctor.GreenCaptchaBot
+module internal Codingteam.Ctor.GreenCaptchaBot
 
 open Fabricator.Core
 open Fabricator.Resources.Files

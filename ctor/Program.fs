@@ -1,4 +1,4 @@
-﻿open Fabricator.Console
+open Fabricator.Console
 open Fabricator.Core
 open Fabricator.Templates.FileTemplates
 
