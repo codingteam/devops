@@ -1,0 +1,39 @@
+---
+- name: Set up user
+  hosts: xmpp2
+  become: true
+
+  vars_files:
+    - vars.yml
+
+  handlers:
+    - name: Reload sshd
+      ansible.builtin.service:
+        name: ssh
+        state: reloaded
+
+  tasks:
+    - name: Ensure a group exists for those who can connect with SSH
+      ansible.builtin.group:
+        name: sshuser
+
+    - name: Ensure a user exists and can SSH into the machine
+      ansible.builtin.user:
+        name: '{{ user.name }}'
+        shell: /bin/sh
+        groups: [ 'sudo', 'sshuser' ]
+        append: true
+        home: '/home/{{ user.name }}'
+        password_lock: true
+
+    - name: Ensure the user can use SSH
+      ansible.posix.authorized_key:
+        user: '{{ user.name }}'
+        key: '{{ user.ssh_key }}'
+
+    - name: Ensure only members of sshuser group can connect via SSH
+      ansible.builtin.lineinfile:
+        path: /etc/ssh/sshd_config
+        line: 'AllowGroups sshuser'
+        validate: 'sshd -f %s -t'
+      notify: Reload sshd

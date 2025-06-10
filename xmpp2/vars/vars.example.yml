@@ -1,0 +1,3 @@
+user:
+  name: mario
+  ssh_key: 'ssh-ed25519 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/XXXXXXXXXX/XXX username1@hostname'
