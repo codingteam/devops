@@ -1,0 +1,8 @@
+# SPDX-FileCopyrightText: 2025 Friedrich von Never <friedrich@fornever.me>
+#
+# SPDX-License-Identifier: MIT
+
+---
+collections:
+  - name: ansible.posix
+    version: 1.5.4
