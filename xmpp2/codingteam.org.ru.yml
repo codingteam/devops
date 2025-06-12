@@ -33,9 +33,11 @@
         image_name_mismatch: recreate
         image: codingteam/codingteam.org.ru:{{ codingteam_org_ru_version }}
         published_ports:
-          - 80:5000
+          - '5000:5000'
         restart_policy: unless-stopped
         default_host_ip: ''
+        env:
+          ASPNETCORE_URLS: "http://+:5000" # otherwise, it can't be reached (listens to "localhost" only?)
       notify: Prune Docker
 
     - name: Set up the nginx configuration file
