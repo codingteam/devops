@@ -1,0 +1,10 @@
+version = 1
+SPDX-PackageName = "devops"
+SPDX-PackageSupplier = "codingteam/devops contributors <https://github.com/codingteam/devops>"
+SPDX-PackageDownloadLocation = "https://github.com/codingteam/devops"
+
+[[annotations]]
+path = "**.DotSettings"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2025 Friedrich von Never <friedrich@fornever.me>"
+SPDX-License-Identifier = "MIT"
