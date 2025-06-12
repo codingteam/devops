@@ -38,4 +38,5 @@
       ansible.builtin.copy:
         src: nginx/nginx.conf
         dest: /etc/nginx/nginx.conf
+        mode: "u=rx,go=rx"
       notify: Reload nginx
