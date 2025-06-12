@@ -7,6 +7,9 @@
   hosts: xmpp2
   become: true
 
+  vars_files:
+    - vars.yml
+
   tasks:
     - name: Update apt cache
       ansible.builtin.apt:
@@ -17,3 +20,9 @@
       ansible.builtin.apt:
         name: docker.io
         state: present
+
+    - name: Add the admin user to docker group
+      ansible.builtin.user:
+        name: '{{ user.name }}'
+        groups: docker
+        append: yes
