@@ -1,0 +1,19 @@
+# SPDX-FileCopyrightText: 2025 Friedrich von Never <friedrich@fornever.me>
+#
+# SPDX-License-Identifier: MIT
+
+---
+- name: Install Docker
+  hosts: xmpp2
+  become: true
+
+  tasks:
+    - name: Update apt cache
+      ansible.builtin.apt:
+        update_cache: true
+        cache_valid_time: 3600
+
+    - name: Install the Docker package
+      ansible.builtin.apt:
+        name: docker.io
+        state: present
