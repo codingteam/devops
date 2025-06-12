@@ -4,3 +4,4 @@
 
 - import_playbook: auth.yml
 - import_playbook: nginx.yml
+- import_playbook: codingteam.org.ru.yml
