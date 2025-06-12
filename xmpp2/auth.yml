@@ -25,7 +25,7 @@
     - name: Ensure a user exists and can SSH into the machine
       ansible.builtin.user:
         name: '{{ user.name }}'
-        shell: /bin/sh
+        shell: /bin/bash
         groups: ['sudo', 'sshuser']
         append: true
         home: '/home/{{ user.name }}'
