@@ -6,6 +6,13 @@
 - name: Install and configure Nginx
   hosts: xmpp2
   become: true
+
+  handlers:
+    - name: Reload nginx
+      ansible.builtin.service:
+        name: nginx
+        state: reloaded
+
   tasks:
     - name: Update apt cache
       ansible.builtin.apt:
@@ -17,8 +24,18 @@
         name: nginx
         state: present
 
-    - name: Start and enable nginx service
-      ansible.builtin.service:
-        name: nginx
-        state: started
-        enabled: true
+    - name: Remove the *-enabled and *-available directories
+      ansible.builtin.file:
+        path: "/etc/nginx/{{ item }}"
+        state: absent
+      loop:
+        - modules-available
+        - modules-enabled
+        - sites-available
+        - sites-enabled
+
+    - name: Set up the main nginx configuration file
+      ansible.builtin.copy:
+        src: nginx/nginx.conf
+        dest: /etc/nginx/nginx.conf
+      notify: Reload nginx
