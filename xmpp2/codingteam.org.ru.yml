@@ -41,3 +41,11 @@
         src: nginx/conf.d/codingteam.org.ru.conf
         dest: /etc/nginx/conf.d/codingteam.org.ru.conf
       notify: Reload nginx
+
+    - name: Create a directory for the old logs # uploaded manually
+      ansible.builtin.file:
+        path: /opt/codingteam/old-logs
+        state: directory
+        owner: www-data
+        group: www-data
+        mode: "u=rx,go=rx"
