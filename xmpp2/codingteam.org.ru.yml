@@ -5,6 +5,8 @@
 ---
 - name: Main site for codingteam.org.ru
   hosts: xmpp2
+  become: true
+
   vars:
     codingteam_org_ru_version: v1.2.1
 
