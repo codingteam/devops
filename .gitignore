@@ -4,8 +4,3 @@
 
 # IntelliJ-based IDE stuff:
 /.idea/
-
-bin/
-obj/
-
-*.private.json
