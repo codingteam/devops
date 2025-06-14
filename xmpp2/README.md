@@ -22,3 +22,17 @@ How to Deploy
 If on Windows, feel free to use scripts `ansible-vault.ps1`, `ansible-playbook.ps1` as a substitute to use Ansible from WSL.
 
 If running deployment for the first time, then run `ansible-playbook --ask-vault-pass auth.yml` to set up the user accounts and access properly.
+
+Standard Operating Procedures
+-----------------------------
+
+### Dump Database Backup for LogList
+```console
+$ docker exec -i loglist.postgresql pg_dump -d loglist -U postgres -F custom --no-acl > loglist.dmp
+```
+
+### Restore Database Backup for LogList
+```console
+$ docker cp loglist.dmp loglist.postgresql:/loglist.dmp
+$ docker exec -i loglist.postgresql pg_restore -d loglist -U loglist --clean -1 /loglist.dmp
+```
