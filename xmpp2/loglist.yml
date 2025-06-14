@@ -106,8 +106,6 @@
           RECAPTCHA_PUBLIC_KEY: '{{ loglist_secrets.recaptcha.public_key }}'
           HTTP_SECRET_KEY: '{{ loglist_secrets.http_secret_key }}'
         volumes:
-          - '{{ host_db_init_scripts_dir }}/:/docker-entrypoint-initdb.d/'
-          - '{{ host_data_dir }}/:/{{ container_data_dir }}/'
           - '{{ host_config_dir }}/application.conf:/app/conf/application.conf'
         networks:
           - name: loglist
