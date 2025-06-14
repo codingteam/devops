@@ -26,7 +26,7 @@
 
     - name: Remove the *-enabled and *-available directories
       ansible.builtin.file:
-        path: "/etc/nginx/{{ item }}"
+        path: '/etc/nginx/{{ item }}'
         state: absent
       loop:
         - modules-available
@@ -36,7 +36,10 @@
 
     - name: Set up the main nginx configuration file
       ansible.builtin.copy:
-        src: nginx/nginx.conf
-        dest: /etc/nginx/nginx.conf
+        src: 'nginx/{{ item }}'
+        dest: '/etc/nginx/{{ item }}'
         mode: "u=rx,go=rx"
+      loop:
+        - nginx.conf
+        - ssl.conf
       notify: Reload nginx
