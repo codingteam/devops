@@ -11,13 +11,9 @@
     - vars.yml
 
   tasks:
-    - name: Update apt cache
-      ansible.builtin.apt:
-        update_cache: true
-        cache_valid_time: 3600
-
     - name: Install the Docker package
       ansible.builtin.apt:
+        cache_valid_time: 86400
         name: docker.io
         state: present
 

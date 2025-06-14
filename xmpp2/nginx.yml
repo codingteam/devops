@@ -14,13 +14,9 @@
         state: reloaded
 
   tasks:
-    - name: Update apt cache
-      ansible.builtin.apt:
-        update_cache: true
-        cache_valid_time: 3600
-
     - name: Install nginx package
       ansible.builtin.apt:
+        cache_valid_time: 86400
         name: nginx
         state: present
 
