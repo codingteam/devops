@@ -20,7 +20,7 @@ issue][issues].
 
 Host specification
 ------------------
-- [xmpp2][hosts.xmpp2]
+- [xmpp2][host.xmpp2]
 
 Documentation
 -------------
