@@ -8,3 +8,5 @@ collections:
     version: 1.5.4
   - name: community.docker
     version: 3.7.0
+  - name: community.general
+    version: 8.3.0
