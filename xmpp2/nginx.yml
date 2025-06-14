@@ -34,7 +34,7 @@
       ansible.builtin.copy:
         src: 'nginx/{{ item }}'
         dest: '/etc/nginx/{{ item }}'
-        mode: "u=rx,go=rx"
+        mode: 'u=rw,go=r'
       loop:
         - nginx.conf
         - ssl.conf

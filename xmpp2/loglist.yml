@@ -44,7 +44,7 @@
       ansible.builtin.file:
         path: '{{ item }}'
         state: directory
-        mode: 'u=rwx,g,o=rx'
+        mode: 'u=rx,g,o=r'
       loop:
         - '{{ host_db_init_scripts_dir }}'
         - '{{ host_data_dir }}'
