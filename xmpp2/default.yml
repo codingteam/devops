@@ -1,0 +1,10 @@
+# SPDX-FileCopyrightText: 2025 Friedrich von Never <friedrich@fornever.me>
+#
+# SPDX-License-Identifier: MIT
+
+- import_playbook: auth.yml
+- import_playbook: nginx.yml
+- import_playbook: docker.yml
+- import_playbook: codingteam.org.ru.yml
+- import_playbook: loglist.yml
+- import_playbook: certbot.yml

@@ -1,0 +1,7 @@
+# SPDX-FileCopyrightText: 2025 Friedrich von Never <friedrich@fornever.me>
+#
+# SPDX-License-Identifier: MIT
+
+exclude_paths:
+  - .github/ # no Ansible plays in there
+  - xmpp2/default.yml # just a list of other files

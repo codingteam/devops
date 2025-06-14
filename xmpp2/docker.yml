@@ -1,0 +1,24 @@
+# SPDX-FileCopyrightText: 2025 Friedrich von Never <friedrich@fornever.me>
+#
+# SPDX-License-Identifier: MIT
+
+---
+- name: Install Docker
+  hosts: xmpp2
+  become: true
+
+  vars_files:
+    - vars.yml
+
+  tasks:
+    - name: Install the Docker package
+      ansible.builtin.apt:
+        cache_valid_time: 86400
+        name: docker.io
+        state: present
+
+    - name: Add the admin user to docker group
+      ansible.builtin.user:
+        name: '{{ user.name }}'
+        groups: docker
+        append: true
