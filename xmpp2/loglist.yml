@@ -82,8 +82,8 @@
 
     - name: Copy the application configuration file
       ansible.builtin.copy:
-        src: loglist/app.conf
-        dest: '{{ host_config_dir }}/app.conf'
+        src: loglist/application.conf
+        dest: '{{ host_config_dir }}/application.conf'
         mode: 'u,g,o=r'
 
     - name: Set up the application container
@@ -108,6 +108,7 @@
         volumes:
           - '{{ host_db_init_scripts_dir }}/:/docker-entrypoint-initdb.d/'
           - '{{ host_data_dir }}/:/{{ container_data_dir }}/'
+          - '{{ host_config_dir }}/application.conf:/app/conf/application.conf'
         networks:
           - name: loglist
         default_host_ip: ''
