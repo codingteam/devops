@@ -16,7 +16,7 @@
     # One-time setup should be performed manually, see the documentation:
     # https://certbot.eff.org/instructions?ws=nginx&os=snap&tab=standard
     #
-    # sudo certbot certonly --nginx -d codingteam.org.ru -d loglist.xyz -d www.loglist.xyz
+    # sudo certbot --nginx -d codingteam.org.ru -d loglist.xyz -d www.loglist.xyz
     #
     # Verify the changes to the web server configuration files performed by this command.
     #

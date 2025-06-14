@@ -34,5 +34,6 @@ $ docker exec -i loglist.postgresql pg_dump -d loglist -U postgres -F custom --n
 ### Restore Database Backup for LogList
 ```console
 $ docker cp loglist.dmp loglist.postgresql:/loglist.dmp
-$ docker exec -i loglist.postgresql pg_restore -d loglist -U loglist --clean -1 /loglist.dmp
+$ docker exec -i loglist.postgresql pg_restore -d loglist -U loglist --clean --no-owner -1 /loglist.dmp
+$ docker exec -i loglist.postgresql rm /loglist.dmp
 ```
