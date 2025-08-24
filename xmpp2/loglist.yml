@@ -40,15 +40,22 @@
         state: reloaded
 
   tasks:
-    - name: Create directories
+    - name: Create read-only directories
       ansible.builtin.file:
         path: '{{ item }}'
         state: directory
-        mode: 'u=rx,g,o=r'
+        mode: 'u=rx,go='
       loop:
         - '{{ host_db_init_scripts_dir }}'
-        - '{{ host_data_dir }}'
         - '{{ host_config_dir }}'
+
+    - name: Create read/write directories
+      ansible.builtin.file:
+        path: '{{ item }}'
+        state: directory
+        mode: 'u=rwx,go='
+      loop:
+        - '{{ host_data_dir }}'
 
     - name: Create the Docker network
       community.docker.docker_network:
@@ -58,7 +65,7 @@
       ansible.builtin.copy:
         src: loglist/init_db.sql
         dest: '{{ host_db_init_scripts_dir }}/init_db.sql'
-        mode: 'u,g,o=rx'
+        mode: 'u=rx,go='
 
     - name: Set up the database container
       community.docker.docker_container:
@@ -84,7 +91,7 @@
       ansible.builtin.copy:
         src: loglist/application.conf
         dest: '{{ host_config_dir }}/application.conf'
-        mode: 'u,g,o=r'
+        mode: 'u=r,go='
 
     - name: Set up the application container
       community.docker.docker_container:
@@ -116,5 +123,5 @@
       ansible.builtin.copy:
         src: nginx/conf.d/loglist.conf
         dest: /etc/nginx/conf.d/loglist.conf
-        mode: "u=rx,go=rx"
+        mode: 'u=rx,go='
       notify: Reload nginx
