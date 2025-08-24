@@ -1,0 +1,52 @@
+# SPDX-FileCopyrightText: 2025 Friedrich von Never <friedrich@fornever.me>
+#
+# SPDX-License-Identifier: MIT
+
+---
+- name: Set up the system
+  hosts: xmpp2
+  become: true
+
+  vars:
+    swap_file_path: '/swapfile'
+    swap_file_size: '2GiB'
+
+  tasks:
+    - name: Check if swap file exists
+      stat:
+        path: '{{ swap_file_path }}'
+      register: swap_file_check
+
+    - name: Create swap file
+      ansible.builtin.command: fallocate -l "{{ swap_file_size }}" "{{ swap_file_path }}"
+      when: not swap_file_check.stat.exists
+
+    - name: Set up swap file permissions
+      ansible.builtin.file:
+        path: '{{ swap_file_path }}'
+        owner: root
+        group: root
+        mode: '0600'
+
+    - name: Prepare the swap file
+      ansible.builtin.command: mkswap "{{ swap_file_path }}"
+      when: not swap_file_check.stat.exists
+
+    - name: Mount the swap file
+      ansible.posix.mount:
+        path: none
+        src: '{{ swap_file_path }}'
+        fstype: swap
+        opts: sw
+        passno: 0
+        dump: 0
+        state: present
+
+    - name: Enable swap
+      command: swapon -a
+      when: not swap_file_check.stat.exists
+
+    - name: Enable swappiness
+      sysctl:
+        name: vm.swappiness
+        value: 1

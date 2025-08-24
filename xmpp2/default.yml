@@ -3,6 +3,7 @@
 # SPDX-License-Identifier: MIT
 
 - import_playbook: auth.yml
+- import_playbook: system.yml
 - import_playbook: nginx.yml
 - import_playbook: docker.yml
 - import_playbook: codingteam.org.ru.yml
