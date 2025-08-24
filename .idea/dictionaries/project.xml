@@ -6,6 +6,7 @@
       <w>initdb</w>
       <w>lineinfile</w>
       <w>mkswap</w>
+      <w>noqa</w>
       <w>passno</w>
       <w>swapon</w>
     </words>
