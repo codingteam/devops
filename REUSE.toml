@@ -8,3 +8,9 @@ path = "**.DotSettings"
 precedence = "aggregate"
 SPDX-FileCopyrightText = "2025 Friedrich von Never <friedrich@fornever.me>"
 SPDX-License-Identifier = "MIT"
+
+[[annotations]]
+path = ".idea/**/**"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2025 Friedrich von Never <friedrich@fornever.me>"
+SPDX-License-Identifier = "MIT"
