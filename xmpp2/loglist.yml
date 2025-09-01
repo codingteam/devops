@@ -45,6 +45,8 @@
         path: '{{ item }}'
         state: directory
         mode: 'u=rx,go='
+        owner: root
+        group: root
       loop:
         - '{{ host_db_init_scripts_dir }}'
         - '{{ host_config_dir }}'
@@ -54,6 +56,8 @@
         path: '{{ item }}'
         state: directory
         mode: 'u=rwx,go='
+        owner: root
+        group: root
       loop:
         - '{{ host_data_dir }}'
 
