@@ -56,8 +56,11 @@
         path: '{{ item }}'
         state: directory
         mode: 'u=rwx,go='
-        owner: root
-        group: root
+        # NOTE: we use 999:999 here because these are hardcoded in the
+        # PostgreSQL Dockerfile, see this for details:
+        # https://stackoverflow.com/q/56188573/2684760
+        owner: 999
+        group: 999
       loop:
         - '{{ host_data_dir }}'
 
