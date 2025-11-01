@@ -29,7 +29,7 @@ Standard Operating Procedures
 
 ### Dump Database Backup for LogList
 ```console
-$ docker exec -i loglist.postgresql pg_dump -d loglist -U postgres -F custom --no-acl > loglist.dmp
+$ docker exec -i loglist.postgresql pg_dump -d loglist -U loglist -F custom --no-acl > loglist.dmp
 ```
 
 ### Restore Database Backup for LogList
