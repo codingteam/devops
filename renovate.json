@@ -4,6 +4,19 @@
         "config:recommended"
     ],
     "automerge": true,
+    "packageRules": [
+        {
+            "description": "Ubuntu 24.04 doesn't support more fresh versions of these packages.",
+            "matchPackageNames": [
+                "community.docker",
+                "community.general"
+            ],
+            "matchUpdateTypes": [
+                "major"
+            ],
+            "enabled": false
+        }
+    ],
     "customManagers": [
         {
             "customType": "regex",
