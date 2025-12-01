@@ -92,6 +92,7 @@
         networks:
           - name: loglist
         default_host_ip: ''
+        restart_policy: unless-stopped
       notify: Prune Docker
 
     - name: Copy the application configuration file
@@ -124,6 +125,7 @@
         networks:
           - name: loglist
         default_host_ip: ''
+        restart_policy: unless-stopped
       notify: Prune Docker
 
     - name: Set up the nginx configuration file
