@@ -16,7 +16,7 @@ on:
 
 jobs:
   lint:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     steps:
       - name: Check out the repository
         uses: actions/checkout@v7
@@ -26,7 +26,7 @@ jobs:
           args: "-c ansible-lint.yml"
 
   encoding:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     steps:
       - name: Check out the repository
         uses: actions/checkout@v7
@@ -36,7 +36,7 @@ jobs:
         run: Install-Module VerifyEncoding -Repository PSGallery -RequiredVersion 2.2.0 -Force && Test-Encoding
 
   licenses:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     steps:
       - name: Check out the repository
         uses: actions/checkout@v7
