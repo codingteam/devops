@@ -9,4 +9,4 @@ collections:
   - name: community.docker
     version: 4.8.9
   - name: community.general
-    version: 11.4.9
+    version: 11.4.10
