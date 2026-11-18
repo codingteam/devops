@@ -1,5 +1,5 @@
 <!--
-SPDX-FileCopyrightText: 2025 Friedrich von Never <friedrich@fornever.me>
+SPDX-FileCopyrightText: 2025-2026 Friedrich von Never <friedrich@fornever.me>
 
 SPDX-License-Identifier: MIT
 -->
@@ -16,9 +16,9 @@ How to Deploy
 3. Copy `vars/vars.example.yml` to `vars/vars.yml` and adjust it accordingly.
 4. Copy `vars/secrets.example.yml` to `vars/secrets.yml` and adjust it accordingly.
 5. `ansible-vault encrypt vars/secrets.yml`
-6. To **check the results** without applying, run `ansible-playbook --ask-vault-pass --ask-become-pass --check --diff default.yml`.
+6. To **check the results** without applying, run `ansible-playbook -i hosts.ini --ask-vault-pass --ask-become-pass --check --diff default.yml`.
 
-   To **deploy**, run `ansible-playbook --ask-vault-pass --ask-become-pass default.yml`.
+   To **deploy**, run `ansible-playbook -i hosts.ini --ask-vault-pass --ask-become-pass default.yml`.
 
 If running deployment for the first time, then run `ansible-playbook --ask-vault-pass auth.yml` to set up the user accounts and access properly.
 
